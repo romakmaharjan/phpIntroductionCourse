@@ -12,3 +12,17 @@
 
 - Think of variables as containers for storing data.
 - variable is a container which store data.
+
+## DataType
+
+### List of the data type
+
+1. string
+2. integer
+3. float
+4. boolean
+5. object
+6. Null
+7. resource
+8. array
+9. undefined
