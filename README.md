@@ -55,3 +55,6 @@
 7. $_ENV
 8. $_COOKIE
 9. $_SESSION
+
+### Created Responsive Form With HTML CSS and PHP
+- By using $_POST and display in another file name display.php
