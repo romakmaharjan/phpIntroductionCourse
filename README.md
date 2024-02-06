@@ -29,15 +29,15 @@
 
 ### PHP OPERATORS
 
-Operators are used to perform operations on variables and values.
+- Operators are used to perform operations on variables and values.
 
-PHP divides the operators in the following groups:
+### PHP divides the operators in the following groups:
 
-. Arithmetic operators
-. Assignment operators
-. Comparison operators
-. Increment/Decrement operators
-. Logical operators
-. String operators
-. Array operators
-. Conditional assignment operators
+1. Arithmetic operators
+2. Assignment operators
+3. Comparison operators
+4. Increment/Decrement operators
+5. Logical operators
+6. String operators
+7. Array operators
+8. Conditional assignment operators
