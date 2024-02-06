@@ -41,3 +41,17 @@
 6. String operators
 7. Array operators
 8. Conditional assignment operators
+
+### PHP Global Variables - Superglobals
+- The "superglobals", which means that they are always accessible, regardless of scope - and we can access them from any function, class or file without having to do anything special.
+
+### The PHP superglobal variables are:
+1. $GLOBALS
+2. $_SERVER
+3. $_REQUEST
+4. $_POST
+5. $_GET
+6. $_FILES
+7. $_ENV
+8. $_COOKIE
+9. $_SESSION
