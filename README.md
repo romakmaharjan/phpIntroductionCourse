@@ -58,3 +58,13 @@
 
 ### Created Responsive Form With HTML CSS and PHP
 - By using $_POST and display in another file name display.php
+
+### PHP Conditional Statements
+- Very often when we write code, we want to perform different actions for different conditions. we can use conditional statements in our code to do this.
+
+- In PHP we have the following conditional statements:
+
+1. if statement - executes some code if one condition is true
+2. if...else statement - executes some code if a condition is true and another code if that condition is false
+3. if...elseif...else statement - executes different codes for more than two conditions
+4. switch statement - selects one of many blocks of code to be executed
