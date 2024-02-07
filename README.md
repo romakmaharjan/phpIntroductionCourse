@@ -68,3 +68,9 @@
 2. if...else statement - executes some code if a condition is true and another code if that condition is false
 3. if...elseif...else statement - executes different codes for more than two conditions
 4. switch statement - selects one of many blocks of code to be executed
+
+### Fetch Data From Database in PHP
+1. Creating Database: First, we will create a database named ‘whatyoulike’. You can use your existing database or create a new one.
+2. Create Table: Create a table named ‘userdata’.
+3. Creating folder and files:
+4. Write PHP code to fetch data from the database and display it in an HTML table. 
