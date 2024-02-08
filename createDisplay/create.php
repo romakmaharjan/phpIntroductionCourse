@@ -3,7 +3,7 @@ $conn = mysqli_connect("localhost","root","","data1");
 if(!$conn){
     die("connection failed");
 }
-// Taking  2 values from the form data(input)
+// Taking  4 values from the form data(input)
 if(!empty($_POST)){
     $username = $_POST['username'];
     $address = $_POST['address'];
@@ -28,11 +28,16 @@ if($result){
 </head>
 
 <body>
-    h1>Please Register Here</h1>
-    Username:<input type="text" name="username" />
-    Address:<input type="text" name="address" />
-    Email: <input type="email" name="email" />
-    Message: <input type="text" name="message" />
+    <center>
+        <h1>Please Register Here</h1><br><br>
+        <form action="display.php" method="post">
+            Username:<input type="text" name="username" /><br><br>
+            Address:<input type="text" name="address" /><br><br>
+            Email: <input type="email" name="email" /><br><br>
+            Message: <input type="text" name="message" /><br><br>
+            <input type="submit" name="submit">
+        </form>
+    </center>
 </body>
 
 </html>
