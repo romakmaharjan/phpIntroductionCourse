@@ -1,3 +1,27 @@
+<?php
+$conn =mysqli_connect("localhost","root","","responsiveform");
+        // Check connection
+        if($conn->connect_error){
+            die("Connection failed:". $conn->connect_error);
+        }
+     // Taking all 5 values from the form data(input)
+if(!empty($_POST)){
+        $first_name =  $_REQUEST['firstname'];
+        $last_name = $_REQUEST['lastname'];
+        $gender =  $_REQUEST['gender'];
+        $city = $_REQUEST['country'];
+        $message =$_POST['subject'];
+        $sql="INSERT INTO demo (firstname,message,lastname,city,gender)
+                    VALUES('$first_name','$message','$last_name','$city','$gender')";      
+        $result= $conn->query($sql);
+        if($result){
+            header("Location:display.php");
+        }
+       }
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +38,7 @@
         <p>Here is a responsive from sample.</p>
 
         <div class="container">
-            <form action="display.php" method="post">
+            <form action="" method="post">
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name</label>
@@ -50,7 +74,6 @@
                     <div class="col-75">
                         <input type="radio" name="gender" value="male" />Male
                         <input type="radio" name="gender" value="female" />female
-                        <input type="radio" name="gender" value="other" />Other
                     </div>
                 </div>
                 <div class="row">

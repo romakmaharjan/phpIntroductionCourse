@@ -1,21 +1,59 @@
-<?php
-
-// print_r($_POST);
-
-if(!empty($_POST)){
-    $firstName=$_POST['firstname'];
-    $lastName=$_POST['lastname'];
-    $city=$_POST['country'];
-    $gender=$_POST['gender'];
-    $subject=$_POST['subject'];
+ <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #588c7e;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: left;
 }
-?>
-<?php if(!empty($_POST)) {?>
-<h1>Your First Name: <?=$firstName; ?></h1>
-<h1>Your Last Name: <?php echo $lastName ?></h1>
-<h1>Your City: <?=$city; ?></h1>
-<h1>Your Gender: <?=$gender; ?></h1>
-<h1>Your Message: <?=$subject; ?></h1>
 
+th {
+    background-color: #588c7e;
+    color: white;
+}
 
-<?php } ?>
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+ </style>
+
+ <table>
+     <tr>
+         <th>FirstName</th>
+         <th>LirstName</th>
+         <th>City</th>
+         <th>Gender</th>
+         <th>Message</th>
+     </tr>
+     <?php 
+      $conn =mysqli_connect("localhost","root","","responsiveform");
+        // Check connection
+        if($conn->connect_error){
+            die("Connection failed:". $conn->connect_error);
+        }
+       
+        $sql = "SELECT * from demo";
+        $result= $conn->query($sql);
+        $num_rows =mysqli_num_rows($result);
+
+        if($num_rows > 0){
+            // LOOP TILL END OF DATA
+            while ($row = $result -> fetch_assoc()){
+                //FETCHING DATA FROM EACH
+                   // ROW OF EVERY COLUMN -->
+                echo "<tr>
+                <td>". $row["firstname"] ."</td>
+                <td>". $row["lastname"]."</td>
+                <td>". $row["city"]."</td>
+                <td>". $row["gender"]."</td>
+                <td>". $row["message"]."</td>
+                </tr>";
+            }
+            echo "</table>";
+        }else{
+            echo " 0 result";
+        }
+        $conn -> close();
+        ?>
+ </table>

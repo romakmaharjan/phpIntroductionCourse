@@ -1,34 +1,50 @@
 <?php
- // servername => localhost
-// username => root
-// password => empty
-// database name => data1
-$conn = mysqli_connect("localhost","root","","data1");
-
-//check connection
-if($conn == false){
-    die("ERROR: Could not connect. "
-                . mysqli_connect_error());
-}
-
- // Taking all 2 values from the form data(input)
         
-        $first_name =  $_REQUEST['first_name'];      
-        $email = $_REQUEST['email'];
-
-          // Performing insert query execution
-        // here our table name is college
-        $sql = "INSERT INTO phpstudent (first_name, email) VALUES ('$first_name', '$email')";
-         
-        if(mysqli_query($conn, $sql)){
-            echo "<h3>data stored in a database successfully.</h3>"; 
-            echo nl2br("\n First name:$first_name\n Email: $email");
-        } else{
-            echo "ERROR: Hush! Sorry $sql. "
-                . mysqli_error($conn);
-        }
-         
-        // Close connection
-        mysqli_close($conn);
-        ?>
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display table</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>FirstName</th>
+            <th>Email</th>
+
+        </tr>
+        <?php 
+      $conn =mysqli_connect("localhost","root","","data1");
+        // Check connection
+        if($conn->connect_error){
+            die("Connection failed:". $conn->connect_error);
+        }
+       
+        $sql = "SELECT * from phpstudent";
+        $result= $conn->query($sql);
+        $num_rows =mysqli_num_rows($result);
+
+        if($num_rows > 0){
+            // LOOP TILL END OF DATA
+            while ($row = $result -> fetch_assoc()){
+                //FETCHING DATA FROM EACH
+                   // ROW OF EVERY COLUMN -->
+                echo "<tr>
+                <td>". $row["first_name"] ."</td>
+                <td>". $row["email"]."</td>
+                </tr>";
+            }
+            echo "</table>";
+        }else{
+            echo " 0 result";
+        }
+        $conn -> close();
+        ?>
+    </table>
+</body>
+
+</html>
