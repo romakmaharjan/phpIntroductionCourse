@@ -43,23 +43,27 @@
 8. Conditional assignment operators
 
 ### PHP Global Variables - Superglobals
+
 - The "superglobals", which means that they are always accessible, regardless of scope - and we can access them from any function, class or file without having to do anything special.
 
 ### The PHP superglobal variables are:
+
 1. $GLOBALS
-2. $_SERVER
-3. $_REQUEST
-4. $_POST
-5. $_GET
-6. $_FILES
-7. $_ENV
-8. $_COOKIE
-9. $_SESSION
+2. $\_SERVER
+3. $\_REQUEST
+4. $\_POST
+5. $\_GET
+6. $\_FILES
+7. $\_ENV
+8. $\_COOKIE
+9. $\_SESSION
 
 ### Created Responsive Form With HTML CSS and PHP
-- By using $_POST and display in another file name display.php
+
+- By using $\_POST and display in another file name display.php
 
 ### PHP Conditional Statements
+
 - Very often when we write code, we want to perform different actions for different conditions. we can use conditional statements in our code to do this.
 
 - In PHP we have the following conditional statements:
@@ -70,24 +74,27 @@
 4. switch statement - selects one of many blocks of code to be executed
 
 ### Connect to MySQL Database
-- Here is Syntax...
-  <br/>
-/* <?php
- $servername = "localhost";
- $username = "root";
- $password = "";
- $databasename = "anynameyouwant";
 
- $conn = mysqli_connect("loclahost","root","","sameasdatabasename");
+- Here is Syntax...
+
+\* <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$databasename = "anynameyouwant";
+
+$conn = mysqli_connect("loclahost","root","","sameasdatabasename");
  if(!$conn){
- die("Connection Failed");
- }
- 
->?
-*/
+die("Connection Failed");
+}
+
+> ? \*
 
 ### INSERT DATA IN DATABASE
- /* <?php
+
+\*
+
+ <?php
 include "connectiondb.php";
 
 // Taking  4 values from the form data(input)
@@ -109,4 +116,4 @@ if($result){
 1. Creating Database: First, we will create a database named ‘whatyoulike’. You can use your existing database or create a new one.
 2. Create Table: Create a table named ‘userdata’.
 3. Creating folder and files:
-4. Write PHP code to fetch data from the database and display it in an HTML table. 
+4. Write PHP code to fetch data from the database and display it in an HTML table.
