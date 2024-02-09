@@ -69,6 +69,23 @@
 3. if...elseif...else statement - executes different codes for more than two conditions
 4. switch statement - selects one of many blocks of code to be executed
 
+### Connect to MySQL Database
+- Here is Syntax...
+  <br/>
+/* <?php
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+ $databasename = "anynameyouwant";
+
+ $conn = mysqli_connect("loclahost","root","","sameasdatabasename");
+ if(!$conn){
+ die("Connection Failed");
+ }
+ 
+>?
+*/
+
 ### Fetch Data From Database in PHP
 1. Creating Database: First, we will create a database named ‘whatyoulike’. You can use your existing database or create a new one.
 2. Create Table: Create a table named ‘userdata’.
