@@ -72,7 +72,7 @@
 ### Connect to MySQL Database
 - Here is Syntax...
   <br/>
-/* <?php
+ <?php
  $servername = "localhost";
  $username = "root";
  $password = "";
@@ -84,10 +84,11 @@
  }
  
 >?
-*/
+
 
 ### INSERT DATA IN DATABASE
- /* <?php
+
+ <?php
 include "connectiondb.php";
 
 // Taking  4 values from the form data(input)
@@ -103,7 +104,14 @@ if($result){
     header("Location:display1.php");
 }
 }
-*/
+
+
+### DISPLAY DATA FROM DATABASE
+
+$sql = "SELECT * FROM phpstudent2";
+            $result= mysqli_query($conn,$sql);
+      
+
 
 ### Fetch Data From Database in PHP
 1. Creating Database: First, we will create a database named ‘whatyoulike’. You can use your existing database or create a new one.
