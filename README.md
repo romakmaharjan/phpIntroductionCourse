@@ -86,6 +86,25 @@
 >?
 */
 
+### INSERT DATA IN DATABASE
+ /* <?php
+include "connectiondb.php";
+
+// Taking  4 values from the form data(input)
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+$sql = "INSERT INTO phpstudent2(username,address,email,message)VALUES('$username','$address','$email','$message')";
+$result=mysqli_query($conn,$sql);
+if($result){
+    header("Location:display1.php");
+}
+}
+*/
+
 ### Fetch Data From Database in PHP
 1. Creating Database: First, we will create a database named ‘whatyoulike’. You can use your existing database or create a new one.
 2. Create Table: Create a table named ‘userdata’.
