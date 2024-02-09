@@ -1,11 +1,8 @@
 <?php
-$conn = mysqli_connect("localhost","root","","data1");
-if (!$conn) {
-    die("Connection Failed: " . mysqli_connect_error());
-}
+include "connectiondb.php";
 
 // Taking  4 values from the form data(input)
-if(!empty($_POST)){
+if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $address = $_POST['address'];
     $email = $_POST['email'];
@@ -32,10 +29,10 @@ if($result){
     <center>
         <h1>This is Form Fill Up Page</h1>
         <form action="" method="post">
-            Username:<input type="text" name="username" /><br><br>
-            Address:<input type="text" name="address" /><br><br>
-            Email: <input type="email" name="email" /><br><br>
-            Message: <input type="text" name="message" /><br><br>
+            Username:<input type="text" name="username" required /><br><br>
+            Address:<input type="text" name="address" required /><br><br>
+            Email: <input type="email" name="email" required /><br><br>
+            Message: <input type="text" name="message" required /><br><br>
             <input type="submit" name="submit">
         </form>
     </center>
