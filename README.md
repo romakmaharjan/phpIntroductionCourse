@@ -76,44 +76,36 @@
 ### Connect to MySQL Database
 
 - Here is Syntax...
-
-\* <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$databasename = "anynameyouwant";
+  <br/>
+  /\* <?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $databasename = "anynameyouwant";
 
 $conn = mysqli_connect("loclahost","root","","sameasdatabasename");
  if(!$conn){
 die("Connection Failed");
 }
 
-> ? \*
+> ?
+> \*/
 
 ### INSERT DATA IN DATABASE
 
-\*
+- <?php include "connectiondb.php"; ?>
 
- <?php
-include "connectiondb.php";
+### DISPLAY DATA FROM DATABASE
 
-// Taking  4 values from the form data(input)
-if(isset($_POST['submit'])){
-    $username = $_POST['username'];
-    $address = $_POST['address'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-$sql = "INSERT INTO phpstudent2(username,address,email,message)VALUES('$username','$address','$email','$message')";
-$result=mysqli_query($conn,$sql);
-if($result){
-    header("Location:display1.php");
-}
-}
-*/
+- $sql = "SELECT * FROM phpstudent2"; $result= mysqli_query($conn,$sql);
 
 ### Fetch Data From Database in PHP
+
 1. Creating Database: First, we will create a database named ‘whatyoulike’. You can use your existing database or create a new one.
 2. Create Table: Create a table named ‘userdata’.
 3. Creating folder and files:
 4. Write PHP code to fetch data from the database and display it in an HTML table.
+
+### SESSION
+
+- Session in PHP is a way of temporarily storing and making data accessible across all the website pages. It will create a temporary file that stores various session variables and their values. This will be destroyed when you close the website.
