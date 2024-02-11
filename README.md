@@ -93,11 +93,30 @@ die("Connection Failed");
 
 ### INSERT DATA IN DATABASE
 
-- <?php include "connectiondb.php"; ?>
+ <?php
+include "connectiondb.php";
+
+// Taking  4 values from the form data(input)
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+$sql = "INSERT INTO phpstudent2(username,address,email,message)VALUES('$username','$address','$email','$message')";
+$result=mysqli_query($conn,$sql);
+if($result){
+    header("Location:display1.php");
+}
+}
+
 
 ### DISPLAY DATA FROM DATABASE
 
-- $sql = "SELECT * FROM phpstudent2"; $result= mysqli_query($conn,$sql);
+$sql = "SELECT * FROM phpstudent2";
+            $result= mysqli_query($conn,$sql);
+      
+
 
 ### Fetch Data From Database in PHP
 
